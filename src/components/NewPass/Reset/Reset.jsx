@@ -31,9 +31,9 @@ export const Reset = () => {
             <input type={passwordShown ? "text" : "password"} placeholder="Enter your new password" id="password"
                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
               <i className="eyeiconreset" onClick={togglePassword}>
-                        <span className="material-symbols-outlined" id="icon">
-                            {passwordShown ? "visibility_off" : "vi sibility"}
-                        </span>
+                <span className="material-symbols-outlined" id="icon">
+                  {passwordShown ? "visibility_off" : "visibility"}
+                </span>
               </i>
           </div>
           <div className="fontconfirm">
@@ -41,9 +41,9 @@ export const Reset = () => {
             <input type={confirmPasswordShown ? "text" : "password"} placeholder="Confirm your password" id="confirmpassword"
                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
               <i className="eyeiconreset" onClick={secondTogglePassword}>
-                        <span className="material-symbols-outlined" id="icon2">
-                            {confirmPasswordShown ? "visibility_off" : "visibility"}
-                        </span>
+                <span className="material-symbols-outlined" id="icon2">
+                  {confirmPasswordShown ? "visibility_off" : "visibility"}
+                </span>
               </i>
           </div>
           <div className="validity" id="validation">Password must contain 6 or more characters with at least one
