@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './Login.css';
 import {NavLink} from "react-router-dom";
+import axios from "axios";
 
 export const Login = () => {
 
@@ -13,6 +14,10 @@ export const Login = () => {
     // inverse the boolean state of passwordShown
     setPasswordShown(!passwordShown);
   };
+
+  const login = async () => {
+    await axios.get('http://localhost:3030/').then(() => {console.log('Data base is connected');}).catch(() => {console.log('Something went wrong')});
+  }
 
   return (
     <div>
@@ -42,7 +47,7 @@ export const Login = () => {
 
           <div className="wrongpass" id="error"></div>
 
-          <button className="loginbtn" id="login">Sign In</button>
+          <button className="loginbtn" id="login" onClick={login}>Sign In</button>
         </div>
       </div>
     </div>
