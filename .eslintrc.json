@@ -1,8 +1,15 @@
 {
   "extends": ["airbnb", "prettier", "plugin:node/recommended"],
-  "plugins": ["prettier"],
+//  "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "error",
+//    "prettier/prettier": "error",
+    "node/no-unsupported-features/es-syntax": ["error", { "ignores": ["modules"] }],
+    "node/no-missing-import": ["error", {
+      "allowModules": [],
+      "resolvePaths": ["/path/to/a/modules/directory"],
+      "tryExtensions": [".js", ".jsx", ".ts", ".tsx", ".json", ".node"]
+    }],
+    "import/no-named-as-default": 0,
     "spaced-comment": "off",
     "no-console": "warn",
     "consistent-return": "off",
@@ -15,5 +22,9 @@
     "class-methods-use-this": "off",
     "prefer-destructuring": ["error", { "object": true, "array": false }],
     "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }]
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
   }
 }

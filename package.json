@@ -1,6 +1,9 @@
 {
   "name": "mindlogistics",
   "version": "0.1.0",
+  "engines": {
+    "node": ">=8.3.0"
+  },
   "private": true,
   "proxy": "http://localhost:3030",
   "dependencies": {
