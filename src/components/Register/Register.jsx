@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import s from './Register.module.css';
 
-function Register () {
+function Register() {
 
   const [passwordShown, setPasswordShown] = useState(false);
   const [confirmPasswordShown, confirmSetPasswordShown] = useState(false);
@@ -69,12 +69,12 @@ function Register () {
           <form onSubmit={validateFormInput}>
             <div>
               <label htmlFor="firstname">Name
-              <input className={s.registerInput} type="text" id="firstname" placeholder="Name" maxLength={32}/>
+                <input className={s.registerInput} type="text" id="firstname" placeholder="Name" maxLength={32}/>
               </label>
             </div>
             <div>
               <label htmlFor="surname">Surname
-              <input className={s.registerInput} type="text" id="surname" placeholder="Surname" maxLength={50}/>
+                <input className={s.registerInput} type="text" id="surname" placeholder="Surname" maxLength={50}/>
               </label>
             </div>
             <div className={s.group}>
@@ -88,18 +88,19 @@ function Register () {
             </div>
             <div>
               <label htmlFor="email">Email
-              <input className={s.registerInput} type="email" id="email" placeholder="Enter email" minLength={5} maxLength={40}/>
+                <input className={s.registerInput} type="email" id="email" placeholder="Enter email" minLength={5}
+                       maxLength={40}/>
               </label>
             </div>
             <div className={s.fontpassword}>
               <label htmlFor="password">Password
-              <input className={s.registerInput} value={formInput.password}
-                     onChange={({target}) => {
-                       handleUserInput(target.name, target.value);
-                     }}
-                     name="password"
-                     type={passwordShown ? "text" : "password"} placeholder="Enter password" id="password"
-                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
+                <input className={s.registerInput} value={formInput.password}
+                       onChange={({target}) => {
+                         handleUserInput(target.name, target.value);
+                       }}
+                       name="password"
+                       type={passwordShown ? "text" : "password"} placeholder="Enter password" id="password"
+                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
               </label>
               <i role="presentation" className={s.eyeicon} onClick={togglePassword}>
                 <span className="material-symbols-outlined" id="icon">
@@ -115,14 +116,14 @@ function Register () {
 
             <div className={s.fontconfirm}>
               <label htmlFor="confirmpassword">Confirm Password
-              <input className={s.registerInput} value={formInput.confirmPassword}
-                     onChange={({ target }) => {
-                       handleUserInput(target.name, target.value);
-                     }}
-                     name="confirmPassword"
-                     type={confirmPasswordShown ? "text" : "password"} placeholder="Confirm password"
-                     id="confirmpassword"
-                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
+                <input className={s.registerInput} value={formInput.confirmPassword}
+                       onChange={({target}) => {
+                         handleUserInput(target.name, target.value);
+                       }}
+                       name="confirmPassword"
+                       type={confirmPasswordShown ? "text" : "password"} placeholder="Confirm password"
+                       id="confirmpassword"
+                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
               </label>
               <i role="presentation" className={s.eyeicon} onClick={secondTogglePassword}>
                 <span className="material-symbols-outlined" id="icon2">

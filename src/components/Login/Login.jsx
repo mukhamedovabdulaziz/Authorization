@@ -16,7 +16,11 @@ function Login() {
   };
 
   const login = async () => {
-    await axios.get('http://localhost:3030/').then(() => {console.log('Data base is connected');}).catch(() => {console.log('Something went wrong')});
+    await axios.get('http://localhost:3030/').then(() => {
+      console.log('Data base is connected');
+    }).catch(() => {
+      console.log('Something went wrong')
+    });
   }
 
   return (
@@ -31,13 +35,13 @@ function Login() {
 
           <div>
             <label htmlFor="email">Email
-            <input type="email" id="email" placeholder="Enter your email"/>
+              <input type="email" id="email" placeholder="Enter your email"/>
             </label>
           </div>
 
           <div className="fontpassword">
             <label htmlFor="password">Password
-            <input type={passwordShown ? "text" : "password"} placeholder="Enter your password" id="password"/>
+              <input type={passwordShown ? "text" : "password"} placeholder="Enter your password" id="password"/>
             </label>
             <i role="presentation" className="eyeicon" onClick={togglePassword}>
                 <span className="material-symbols-outlined" id="icon">

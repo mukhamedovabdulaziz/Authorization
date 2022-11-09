@@ -11,18 +11,18 @@ import Reset from "./components/NewPass/Reset/Reset";
 function App() {
   return (
     <div className="App">
-    <BrowserRouter>
-      <div className="content">
-        <div className="image"/>
-        <Routes>
-          <Route path="/" element={<Login/>}/>
-          <Route path="/register" element={<Register/>}/>
-          <Route path="/activation" element={<Activation/>}/>
-          <Route path="/new_pass" element={<NewPass/>}/>
-          <Route path="/reset" element={<Reset/>}/>
-        </Routes>
-      </div>
-    </BrowserRouter>
+      <BrowserRouter>
+        <div className="content">
+          <div className="image"/>
+          <Routes>
+            <Route path="/" element={<Login/>}/>
+            <Route path="/register" element={<Register/>}/>
+            <Route path="/activation" element={<Activation/>}/>
+            <Route path="/new_pass" element={<NewPass/>}/>
+            <Route path="/reset" element={<Reset/>}/>
+          </Routes>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }

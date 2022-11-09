@@ -1,7 +1,7 @@
 import React from 'react';
 import './NewPass.css';
 
-function NewPass () {
+function NewPass() {
   return (
     <div>
       <div className="container">
@@ -13,7 +13,7 @@ function NewPass () {
           <h2 style={{textAlign: "center"}}>Reset Password</h2>
           <div>
             <label htmlFor="email">Email
-            <input type="email" placeholder="Enter your email" id="email"/>
+              <input type="email" placeholder="Enter your email" id="email"/>
             </label>
           </div>
           <button type="button" className="sendbtn" id="send">Send</button>

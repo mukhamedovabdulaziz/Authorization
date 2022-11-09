@@ -25,30 +25,31 @@ function Reset() {
 
           <div>
             <label htmlFor="validation">Validation Code
-            <input type="text" id="validation_code"/>
+              <input type="text" id="validation_code"/>
             </label>
           </div>
           <div className="fontpassword">
             <label htmlFor="password">New password
-            <input type={passwordShown ? "text" : "password"} placeholder="Enter your new password" id="password"
-                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
+              <input type={passwordShown ? "text" : "password"} placeholder="Enter your new password" id="password"
+                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
             </label>
-              <i role="presentation" className="eyeiconreset" onClick={togglePassword}>
+            <i role="presentation" className="eyeiconreset" onClick={togglePassword}>
                 <span className="material-symbols-outlined" id="icon">
                   {passwordShown ? "visibility_off" : "visibility"}
                 </span>
-              </i>
+            </i>
           </div>
           <div className="fontconfirm">
             <label htmlFor="confirmpassword">Confirm Password
-            <input type={confirmPasswordShown ? "text" : "password"} placeholder="Confirm your password" id="confirmpassword"
-                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
+              <input type={confirmPasswordShown ? "text" : "password"} placeholder="Confirm your password"
+                     id="confirmpassword"
+                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
             </label>
-              <i role="presentation" className="eyeiconreset" onClick={secondTogglePassword}>
+            <i role="presentation" className="eyeiconreset" onClick={secondTogglePassword}>
                 <span className="material-symbols-outlined" id="icon2">
                   {confirmPasswordShown ? "visibility_off" : "visibility"}
                 </span>
-              </i>
+            </i>
           </div>
           <div className="validity" id="validation">Password must contain 6 or more characters with at least one
             number and one uppercase and one lowercase letter
