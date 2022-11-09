@@ -3,7 +3,7 @@ import './Login.css';
 import {NavLink} from "react-router-dom";
 import axios from "axios";
 
-export const Login = () => {
+function Login() {
 
   // Initialize a boolean state
   const [passwordShown, setPasswordShown] = useState(false);
@@ -25,31 +25,36 @@ export const Login = () => {
         <div className="loginblock">
 
           <div className="logo">
+            {/* eslint-disable-next-line global-require */}
             <img src={require("../../images/logo.png")} alt="logo" height={50}/>
           </div>
 
           <div>
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Email
             <input type="email" id="email" placeholder="Enter your email"/>
+            </label>
           </div>
 
           <div className="fontpassword">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Password
             <input type={passwordShown ? "text" : "password"} placeholder="Enter your password" id="password"/>
-            <i className="eyeicon" onClick={togglePassword}>
+            </label>
+            <i role="presentation" className="eyeicon" onClick={togglePassword}>
                 <span className="material-symbols-outlined" id="icon">
                   {passwordShown ? "visibility_off" : "visibility"}
                 </span>
             </i>
           </div>
 
-          <div className="forgotpass"><NavLink to={"/activation"}>Forgot Password?</NavLink></div>
+          <div className="forgotpass"><NavLink to="/activation">Forgot Password?</NavLink></div>
 
-          <div className="wrongpass" id="error"></div>
+          <div className="wrongpass" id="error"/>
 
-          <button className="loginbtn" id="login" onClick={login}>Sign In</button>
+          <button type="button" className="loginbtn" id="login" onClick={login}>Sign In</button>
         </div>
       </div>
     </div>
   );
-};
+}
+
+export default Login;

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import s from './Register.module.css';
 
-export const Register = () => {
+function Register () {
 
   const [passwordShown, setPasswordShown] = useState(false);
   const [confirmPasswordShown, confirmSetPasswordShown] = useState(false);
@@ -40,7 +40,7 @@ export const Register = () => {
 
   const validateFormInput = (event) => {
     event.preventDefault();
-    let inputError = {
+    const inputError = {
       password: "",
       confirmPassword: "",
     };
@@ -62,19 +62,23 @@ export const Register = () => {
         <div className={s.registerblock}>
 
           <div className={s.registerLogo}>
+            {/* eslint-disable-next-line global-require */}
             <img src={require("../../images/logo.png")} alt="logo" height={40}/>
           </div>
 
           <form onSubmit={validateFormInput}>
             <div>
-              <label htmlFor="firstname">Name</label>
+              <label htmlFor="firstname">Name
               <input className={s.registerInput} type="text" id="firstname" placeholder="Name" maxLength={32}/>
+              </label>
             </div>
             <div>
-              <label htmlFor="surname">Surname</label>
+              <label htmlFor="surname">Surname
               <input className={s.registerInput} type="text" id="surname" placeholder="Surname" maxLength={50}/>
+              </label>
             </div>
             <div className={s.group}>
+              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
               <label htmlFor="group">Group</label><br/>
               <select className={s.groupSelect} name="group" id="group">
                 <option style={{display: "none"}} selected>Select Group</option>
@@ -83,11 +87,12 @@ export const Register = () => {
               </select>
             </div>
             <div>
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">Email
               <input className={s.registerInput} type="email" id="email" placeholder="Enter email" minLength={5} maxLength={40}/>
+              </label>
             </div>
             <div className={s.fontpassword}>
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">Password
               <input className={s.registerInput} value={formInput.password}
                      onChange={({target}) => {
                        handleUserInput(target.name, target.value);
@@ -95,7 +100,8 @@ export const Register = () => {
                      name="password"
                      type={passwordShown ? "text" : "password"} placeholder="Enter password" id="password"
                      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
-              <i className={s.eyeicon} onClick={togglePassword}>
+              </label>
+              <i role="presentation" className={s.eyeicon} onClick={togglePassword}>
                 <span className="material-symbols-outlined" id="icon">
                   {passwordShown ? "visibility_off" : "visibility"}
                 </span>
@@ -108,7 +114,7 @@ export const Register = () => {
             </div>
 
             <div className={s.fontconfirm}>
-              <label htmlFor="confirmpassword">Confirm Password</label>
+              <label htmlFor="confirmpassword">Confirm Password
               <input className={s.registerInput} value={formInput.confirmPassword}
                      onChange={({ target }) => {
                        handleUserInput(target.name, target.value);
@@ -117,7 +123,8 @@ export const Register = () => {
                      type={confirmPasswordShown ? "text" : "password"} placeholder="Confirm password"
                      id="confirmpassword"
                      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
-              <i className={s.eyeicon} onClick={secondTogglePassword}>
+              </label>
+              <i role="presentation" className={s.eyeicon} onClick={secondTogglePassword}>
                 <span className="material-symbols-outlined" id="icon2">
                   {confirmPasswordShown ? "visibility_off" : "visibility"}
                 </span>
@@ -135,4 +142,6 @@ export const Register = () => {
       </div>
     </div>
   );
-};
+}
+
+export default Register;
