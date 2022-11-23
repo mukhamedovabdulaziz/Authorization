@@ -3,7 +3,8 @@ import './NewPass.css';
 
 function NewPass() {
   return (
-    <div>
+    <div className="content">
+      <div className="image"/>
       <div className="container">
         <div className="block">
           <div className="logo">

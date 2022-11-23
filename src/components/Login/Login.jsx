@@ -17,14 +17,15 @@ function Login() {
 
   const login = async () => {
     await axios.get('http://localhost:3030/').then(() => {
-      console.log('Data base is connected');
+      // console.log('Data base is connected');
     }).catch(() => {
-      console.log('Something went wrong')
+      // console.log('Something went wrong')
     });
   }
 
   return (
-    <div>
+    <div className="content">
+      <div className="image"/>
       <div className="logcon">
         <div className="loginblock">
 

@@ -57,7 +57,8 @@ function Register() {
   };
 
   return (
-    <div>
+    <div className="content">
+      <div className="image"/>
       <div className={s.regcon}>
         <div className={s.registerblock}>
 

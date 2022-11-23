@@ -4,7 +4,8 @@ import './Activate.css'
 function Activation() {
 
   return (
-    <div>
+    <div className="content">
+      <div className="image"/>
       <div className="activecon">
         <div className="activeblock">
           <div className="logo">

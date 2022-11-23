@@ -15,7 +15,8 @@ function Reset() {
   };
 
   return (
-    <div>
+    <div className="content">
+      <div className="image"/>
       <div className="container">
         <div className="blockreset">
           <div className="logo" style={{textAlign: "center"}}>
