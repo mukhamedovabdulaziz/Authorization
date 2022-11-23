@@ -10,11 +10,6 @@ body {
     font-family: "Ubuntu", sans-serif;
 }
 
-a {
-    color: blue;
-    text-decoration: none;
-}
-
 .content {
     display: flex;
 }
@@ -49,7 +44,7 @@ a {
     margin: 15px auto;
 }
 
-label {
+.regLabel {
     font-weight: bold;
 }
 

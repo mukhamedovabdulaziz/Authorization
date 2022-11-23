@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './Login.css';
 import {NavLink} from "react-router-dom";
 import axios from "axios";
+import s from './Login.module.css'
 
 function Login() {
 
@@ -35,14 +36,14 @@ function Login() {
           </div>
 
           <div>
-            <label htmlFor="email">Email
-              <input type="email" id="email" placeholder="Enter your email"/>
+            <label className={s.logLabel} htmlFor="email">Email
+              <input className={s.logInput} type="email" id="email" placeholder="Enter your email"/>
             </label>
           </div>
 
           <div className="fontpassword">
-            <label htmlFor="password">Password
-              <input type={passwordShown ? "text" : "password"} placeholder="Enter your password" id="password"/>
+            <label className={s.logLabel} htmlFor="password">Password
+              <input className={s.logInput} type={passwordShown ? "text" : "password"} placeholder="Enter your password" id="password"/>
             </label>
             <i role="presentation" className="eyeicon" onClick={togglePassword}>
                 <span className="material-symbols-outlined" id="icon">
@@ -51,7 +52,7 @@ function Login() {
             </i>
           </div>
 
-          <div className="forgotpass"><NavLink to="/activation">Forgot Password?</NavLink></div>
+          <div className="forgotpass"><NavLink className={s.forgotLink} to="/activation">Forgot Password?</NavLink></div>
 
           <div className="wrongpass" id="error"/>
 

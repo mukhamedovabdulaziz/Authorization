@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './Reset.css'
+import s from './Reset.module.css'
 
 function Reset() {
 
@@ -25,13 +26,13 @@ function Reset() {
           </div>
 
           <div>
-            <label htmlFor="validation">Validation Code
-              <input type="text" id="validation_code"/>
+            <label className={s.resetLabel} htmlFor="validation">Validation Code
+              <input className={s.resetInput} type="text" id="validation_code"/>
             </label>
           </div>
           <div className="fontpassword">
-            <label htmlFor="password">New password
-              <input type={passwordShown ? "text" : "password"} placeholder="Enter your new password" id="password"
+            <label className={s.resetLabel} htmlFor="password">New password
+              <input className={s.resetInput} type={passwordShown ? "text" : "password"} placeholder="Enter your new password" id="password"
                      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
             </label>
             <i role="presentation" className="eyeiconreset" onClick={togglePassword}>
@@ -41,8 +42,8 @@ function Reset() {
             </i>
           </div>
           <div className="fontconfirm">
-            <label htmlFor="confirmpassword">Confirm Password
-              <input type={confirmPasswordShown ? "text" : "password"} placeholder="Confirm your password"
+            <label className={s.resetLabel} htmlFor="confirmpassword">Confirm Password
+              <input className={s.resetInput} type={confirmPasswordShown ? "text" : "password"} placeholder="Confirm your password"
                      id="confirmpassword"
                      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
             </label>

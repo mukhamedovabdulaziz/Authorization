@@ -1,5 +1,6 @@
 import React from 'react';
 import './NewPass.css';
+import s from './NewPass.module.css'
 
 function NewPass() {
   return (
@@ -13,8 +14,8 @@ function NewPass() {
           </div>
           <h2 style={{textAlign: "center"}}>Reset Password</h2>
           <div>
-            <label htmlFor="email">Email
-              <input type="email" placeholder="Enter your email" id="email"/>
+            <label className={s.newLabel} htmlFor="email">Email
+              <input className={s.newInput} type="email" placeholder="Enter your email" id="email"/>
             </label>
           </div>
           <button type="button" className="sendbtn" id="send">Send</button>

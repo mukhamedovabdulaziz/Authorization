@@ -1,5 +1,6 @@
 import React from 'react';
 import './Activate.css'
+import s from './Activation.module.css';
 
 function Activation() {
 
@@ -15,7 +16,7 @@ function Activation() {
 
           <h2 style={{textAlign: "center"}}>Activate</h2>
           <div>
-            <input type="text" id="active_code" placeholder="Activation code"/>
+            <input className={s.actInput} type="text" id="active_code" placeholder="Activation code"/>
           </div>
 
           <div className="buttons">

@@ -69,18 +69,18 @@ function Register() {
 
           <form onSubmit={validateFormInput}>
             <div>
-              <label htmlFor="firstname">Name
+              <label className={s.regLabel} htmlFor="firstname">Name
                 <input className={s.registerInput} type="text" id="firstname" placeholder="Name" maxLength={32}/>
               </label>
             </div>
             <div>
-              <label htmlFor="surname">Surname
+              <label className={s.regLabel} htmlFor="surname">Surname
                 <input className={s.registerInput} type="text" id="surname" placeholder="Surname" maxLength={50}/>
               </label>
             </div>
             <div className={s.group}>
               {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-              <label htmlFor="group">Group</label><br/>
+              <label className={s.regLabel} htmlFor="group">Group</label><br/>
               <select className={s.groupSelect} name="group" id="group">
                 <option style={{display: "none"}} selected>Select Group</option>
                 <option>Admin</option>
@@ -88,13 +88,13 @@ function Register() {
               </select>
             </div>
             <div>
-              <label htmlFor="email">Email
+              <label className={s.regLabel} htmlFor="email">Email
                 <input className={s.registerInput} type="email" id="email" placeholder="Enter email" minLength={5}
                        maxLength={40}/>
               </label>
             </div>
             <div className={s.fontpassword}>
-              <label htmlFor="password">Password
+              <label className={s.regLabel} htmlFor="password">Password
                 <input className={s.registerInput} value={formInput.password}
                        onChange={({target}) => {
                          handleUserInput(target.name, target.value);
@@ -116,7 +116,7 @@ function Register() {
             </div>
 
             <div className={s.fontconfirm}>
-              <label htmlFor="confirmpassword">Confirm Password
+              <label className={s.regLabel} htmlFor="confirmpassword">Confirm Password
                 <input className={s.registerInput} value={formInput.confirmPassword}
                        onChange={({target}) => {
                          handleUserInput(target.name, target.value);
