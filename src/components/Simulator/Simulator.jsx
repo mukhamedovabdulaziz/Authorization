@@ -28,23 +28,23 @@ function Simulator() {
           <div className={s.inputs}>
             <div className={s.allInput}>
               <div>
-                <label className="simLabel" htmlFor="port_of_shipment">Port of Shipment
-                <input className="simInput" id="port_of_shipment"/>
+                <label className={s.simLabel} htmlFor="port_of_shipment">Port of Shipment
+                <input className={s.simInput} id="port_of_shipment"/>
                 </label>
               </div>
               <div>
-                <label className="simLabel" htmlFor="destination">Destination
-                <input className="simInput" id="destination"/>
+                <label className={s.simLabel} htmlFor="destination">Destination
+                <input className={s.simInput} id="destination"/>
                 </label>
               </div>
               <div>
-                <label className="simLabel" htmlFor="date">Date
-                <input className="simInput" id="date"/>
+                <label className={s.simLabel} htmlFor="date">Date
+                <input className={s.simInput} id="date"/>
               </label>
               </div>
               <div>
-                <label className="simLabel" htmlFor="container_types">Container Types
-                <input className="simInput" id="container_types"/>
+                <label className={s.simLabel} htmlFor="container_types">Container Types
+                <input className={s.simInput} id="container_types"/>
                 </label>
               </div>
             </div>
@@ -64,7 +64,7 @@ function Simulator() {
             </div>
           </div>
 
-          <div className="pages">
+          <div className={s.pages}>
             <p>Pages</p>
             <div>Lörem ipsum</div>
             <div>Lörem ipsum</div>
@@ -72,14 +72,14 @@ function Simulator() {
             <div>Lörem ipsum</div>
           </div>
 
-          <div className="service">
+          <div className={s.service}>
             <p>Service</p>
             <div>Lörem ipsum</div>
             <div>Lörem ipsum</div>
             <div>Lörem ipsum</div>
           </div>
 
-          <div className="map">
+          <div className={s.map}>
             <p>Maps Location</p>
             <iframe
               title="map"

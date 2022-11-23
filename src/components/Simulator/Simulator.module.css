@@ -45,6 +45,7 @@
 
 .searchBar {
     display: flex;
+    width: 90%
 }
 
 .inputs {
@@ -71,11 +72,11 @@
 }
 
 .simInput {
+    width: 95%;
     height: 20px;
     background-color: #eaf3ff;
     outline: 0;
     border: 0;
-    border-right: 1px solid #82c8ff;
     color: #16548a;
     font-size: 12px;
     font-weight: 500;
