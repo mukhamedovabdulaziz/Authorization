@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.navLink {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #16548a;
+    font-weight: 500;
+}
