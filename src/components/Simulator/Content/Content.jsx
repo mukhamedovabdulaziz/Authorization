@@ -1,12 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from "./Content.module.css";
 
 function Content() {
+
+  const [isActive, setIsActive] = useState(true);
+
+  const handleClick = () => {
+    setIsActive(current => !current);
+  };
+
+  const cifStyle = {
+    backgroundColor: isActive ? "#008fff" : "#82c8ff"
+  }
+
+  const dapStyle = {
+    backgroundColor: isActive? "#82c8ff" : "#008fff"
+  }
+
   return (
     <section className={s.content}>
       <div className={s.tabs}>
-        <div className={s.cif} id="cif">CIF</div>
-        <div className={s.dap} id="dap">DAP</div>
+        <button type="button" className={s.cif} style={cifStyle} onClick={handleClick}>CIF</button>
+        <button type="button" className={s.dap} style={dapStyle} onClick={handleClick}>DAP</button>
       </div>
 
       <div className={s.searchBar}>
