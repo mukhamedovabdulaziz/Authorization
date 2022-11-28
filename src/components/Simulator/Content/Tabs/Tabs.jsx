@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import s from "./Tabs.module.css";
 
-function Tabs () {
+function Tabs() {
 
   const [isActive, setIsActive] = useState(true);
 
@@ -14,15 +14,13 @@ function Tabs () {
   }
 
   const dapStyle = {
-    backgroundColor: isActive? "#82c8ff" : "#008fff"
+    backgroundColor: isActive ? "#82c8ff" : "#008fff"
   }
 
   return (
-    <div>
-      <div className={s.tabs}>
-        <button type="button" className={s.cif} style={cifStyle} onClick={handleClick}>CIF</button>
-        <button type="button" className={s.dap} style={dapStyle} onClick={handleClick}>DAP</button>
-      </div>
+    <div className={s.tabs}>
+      <button type="button" className={s.cif} style={cifStyle} onClick={handleClick}>CIF</button>
+      <button type="button" className={s.dap} style={dapStyle} onClick={handleClick}>DAP</button>
     </div>
   );
 }
