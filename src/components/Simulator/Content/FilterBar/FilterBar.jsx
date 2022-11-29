@@ -3,7 +3,7 @@ import s from "./FilterBar.module.css";
 
 function FilterBar() {
   return (
-    <div>
+    <div className={s.filterBar}>
       <h3>Activity</h3>
       <div>
         <label htmlFor="current">
@@ -36,14 +36,17 @@ function FilterBar() {
         </label>
       </div>
 
-      <div>
         <h3>Offer ID</h3>
         <input className={s.offer} type="text"/>
-      </div>
+
+        <h3>Shipping Lines</h3>
+        <button type="button" className={s.shipping}>MSC</button>
 
       <div>
-        <h3>Shipping Lines</h3>
-        <input className={s.shipping} type="text"/>
+        <label htmlFor="archived">
+          <input className={s.filterInput} type="checkbox" value="direct"/>
+          Direct
+        </label>
       </div>
     </div>
   );

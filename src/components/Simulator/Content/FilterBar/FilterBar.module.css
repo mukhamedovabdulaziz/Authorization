@@ -1,3 +1,11 @@
+.filterBar {
+    width: 250px;
+    padding: 10px;
+    box-shadow: 0 2px 4px 0;
+    border-radius: 12px;
+    margin-top: 70px;
+}
+
 .filterInput {
     margin-right: 0.5em;
 }
@@ -7,5 +15,7 @@
 }
 
 .shipping {
-
+    background-color: white;
+    border: 1px solid #008fff;
+    border-radius: 25px;
 }
