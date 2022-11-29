@@ -50,11 +50,11 @@
     outline: none;
 }
 
-.input:focus {
+.registerInput:focus {
     border: 1px solid #008fff;
 }
 
-.input:invalid {
+.registerInput:invalid {
     color: #000;
     background-color: ivory;
     border: 1px solid red;
