@@ -1,0 +1,124 @@
+.content {
+  display: flex;
+}
+
+.image {
+  height: 100vh;
+  width: 60vw;
+  background-image: url("../../../assets/images/mindlogistics.jpg");
+  filter: brightness(0.7);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.regcon {
+  position: relative;
+  width: 40vw;
+  height: 100vh;
+  -webkit-box-shadow: -10px 1px 5px -5px rgba(34, 60, 80, 0.6);
+  -moz-box-shadow: -10px 1px 5px -5px rgba(34, 60, 80, 0.6);
+  box-shadow: -10px 1px 5px -5px rgba(34, 60, 80, 0.6);
+}
+
+.registerblock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.registerLogo {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.regLabel {
+  font-weight: bold;
+}
+
+.registerInput {
+  text-indent: 10px;
+  /* position: relative; */
+  width: 100%;
+  height: 37px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  outline: none;
+}
+
+.registerInput:focus {
+  border: 1px solid #008fff;
+}
+
+.registerInput:invalid {
+  color: #000;
+  background-color: ivory;
+  border: 1px solid red;
+}
+
+.groupSelect {
+  margin-bottom: 10px;
+  text-indent: 10px;
+  height: 37px;
+  border: 1px solid;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+}
+
+.group-select:focus {
+  border: 1px solid #008fff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.registerbtn {
+  text-indent: 0;
+  /*width: 100%;*/
+  height: 45px;
+  border-radius: 8px;
+  outline: none;
+  color: #fff;
+  border: 0;
+  background-color: #008fff;
+}
+
+.registerbtn:hover {
+  cursor: pointer;
+}
+
+.fontpassword,
+.fontconfirm {
+  position: relative;
+}
+
+.fontpassword i,
+.fontconfirm i {
+  position: absolute;
+  left: 85%;
+  top: 43%;
+}
+
+.eyeicon {
+  cursor: pointer;
+}
+
+.registerValidity {
+  /*display: none;*/
+  color: gray;
+  margin-bottom: 15px;
+  font-size: 13px;
+  cursor: default;
+}
+
+.errorMessage {
+  font-size: 15px;
+  color: red;
+}

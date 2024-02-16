@@ -1,13 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.content {
+  display: flex;
+}
+
+.image {
+  height: 100vh;
+  width: 60vw;
+  background-image: url("./assets/images/mindlogistics.jpg");
+  filter: brightness(0.7);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.con {
+  position: relative;
+  width: 40vw;
+  height: 100vh;
+  -webkit-box-shadow: -10px 1px 5px -5px rgba(34, 60, 80, 0.6);
+  -moz-box-shadow: -10px 1px 5px -5px rgba(34, 60, 80, 0.6);
+  box-shadow: -10px 1px 5px -5px rgba(34, 60, 80, 0.6);
+}
+
+.block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.error {
+  color: #008fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.error:hover {
+  text-decoration: underline;
 }
